@@ -1,0 +1,4 @@
+- [x] Update import statement in Header.tsx to remove unused Leaf icon
+- [x] Replace the div containing Leaf icon with img tag for favicon.ico in Header.tsx
+- [x] Update import statement in Footer.tsx to remove unused Leaf icon
+- [x] Replace the div containing Leaf icon with img tag for favicon.ico in Footer.tsx

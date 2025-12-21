@@ -1,5 +1,5 @@
+import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Leaf, MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -10,27 +10,29 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-background" />
-              </div>
+              <img
+                src="/favicon.ico"
+                alt="SPA Plus Logo"
+                className="w-10 h-10 rounded-full bg-background/10"
+              />
               <span className="font-display text-2xl tracking-wide">
                 SPA <span className="text-gold font-medium">Plus</span>
               </span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-6">
-              Un havre de paix dédié à votre bien-être. Découvrez une expérience unique de 
-              relaxation et de beauté pour femmes et hommes.
+              Un havre de paix dédié à votre bien-être. Découvrez une expérience
+              unique de relaxation et de beauté pour femmes et hommes.
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="spa_plus_abidjan"
                 className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-gold transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="spa.plus.abidjan"
                 className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-gold transition-colors"
                 aria-label="Facebook"
               >
@@ -87,25 +89,34 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-background/70 text-sm">
-                  123 Avenue du Bien-être<br />75008 Paris, France
+                  Ivoir Golf Club
+                  <br /> Abidjan, Côte d'Ivoire
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+33123456789" className="text-background/70 text-sm hover:text-gold transition-colors">
-                  +33 1 23 45 67 89
+                <a
+                  href="tel:+225 0759985298"
+                  className="text-background/70 text-sm hover:text-gold transition-colors"
+                >
+                  +225 0759985298
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:contact@spapplus.fr" className="text-background/70 text-sm hover:text-gold transition-colors">
-                  contact@spapplus.fr
+                <a
+                  href="mailto:contact@spapplus.fr"
+                  className="text-background/70 text-sm hover:text-gold transition-colors"
+                >
+                  spa-plus@aviso.ci
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-background/70 text-sm">
-                  Lun - Sam: 9h - 20h<br />Dim: 10h - 18h
+                  Lun - Sam: 9h - 20h
+                  <br />
+                  Dim: 10h - 18h
                 </span>
               </li>
             </ul>
@@ -120,10 +131,16 @@ export const Footer = () => {
             © 2024 SPA Plus. Tous droits réservés.
           </p>
           <div className="flex gap-6">
-            <Link to="#" className="text-background/50 text-sm hover:text-gold transition-colors">
+            <Link
+              to="#"
+              className="text-background/50 text-sm hover:text-gold transition-colors"
+            >
               Mentions Légales
             </Link>
-            <Link to="#" className="text-background/50 text-sm hover:text-gold transition-colors">
+            <Link
+              to="#"
+              className="text-background/50 text-sm hover:text-gold transition-colors"
+            >
               Politique de Confidentialité
             </Link>
           </div>

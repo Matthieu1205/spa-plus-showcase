@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Users, Heart, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Layout } from "@/components/layout/Layout";
-import heroImage from "@/assets/hero-spa.jpg";
-import massageImage from "@/assets/massage-service.jpg";
-import facialImage from "@/assets/facial-service.jpg";
 import hammamImage from "@/assets/hammam-service.jpg";
-import productsImage from "@/assets/products-cosmetics.jpg";
+import heroImage from "@/assets/hero-spa.jpg";
+import massageImage from "@/assets/img-massage.jpg";
+import facialImage from "@/assets/img1.jpg";
+import productsImage from "@/assets/produit.jpg";
+import { Layout } from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Award, Heart, Sparkles, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -72,10 +72,11 @@ const Index = () => {
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-up delay-100">
               L'Art du <span className="italic">Bien-être</span>
-              <br />au Féminin & Masculin
+              <br />
+              au Féminin & Masculin
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-lg animate-fade-up delay-200">
-              Offrez-vous une parenthèse de sérénité. Découvrez nos soins 
+              Offrez-vous une parenthèse de sérénité. Découvrez nos soins
               exclusifs et laissez-vous porter vers une relaxation absolue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
@@ -114,7 +115,9 @@ const Index = () => {
                   <feature.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-display text-xl mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -128,9 +131,7 @@ const Index = () => {
             <span className="inline-block font-display text-gold tracking-widest uppercase text-sm mb-4">
               Nos Prestations
             </span>
-            <h2 className="heading-section mb-6">
-              Des Soins d'Exception
-            </h2>
+            <h2 className="heading-section mb-6">Des Soins d'Exception</h2>
             <div className="divider-gold" />
           </div>
 
@@ -145,8 +146,12 @@ const Index = () => {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-display text-2xl mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  <h3 className="font-display text-2xl mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {service.description}
+                  </p>
                   <Link
                     to="/services"
                     className="inline-flex items-center text-primary font-medium text-sm hover:gap-3 gap-2 transition-all"
@@ -175,12 +180,15 @@ const Index = () => {
                 Notre Boutique
               </span>
               <h2 className="heading-section mb-6">
-                Prolongez l'Expérience<br />chez Vous
+                Prolongez l'Expérience
+                <br />
+                chez Vous
               </h2>
               <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                Découvrez notre sélection de produits cosmétiques premium, soigneusement 
-                choisis pour femmes et hommes. Des soins de qualité professionnelle 
-                pour continuer votre rituel bien-être à domicile.
+                Découvrez notre sélection de produits cosmétiques premium,
+                soigneusement choisis pour femmes et hommes. Des soins de
+                qualité professionnelle pour continuer votre rituel bien-être à
+                domicile.
               </p>
               <Button variant="gold" size="lg" asChild>
                 <Link to="/boutique">
@@ -213,11 +221,12 @@ const Index = () => {
         </div>
         <div className="container-spa relative z-10 text-center">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-primary-foreground mb-6">
-            Prêt pour une Escapade<br />
+            Prêt pour une Escapade
+            <br />
             <span className="italic">Bien-être</span> ?
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-xl mx-auto">
-            Réservez dès maintenant votre moment de détente et laissez-nous 
+            Réservez dès maintenant votre moment de détente et laissez-nous
             prendre soin de vous.
           </p>
           <Button
