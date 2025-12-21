@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoSpaPlus from "@/assets/logo-spa-plus.jpg";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -36,13 +37,12 @@ export const Header = () => {
     >
       <div className="container-spa flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-            <Leaf className="w-5 h-5 text-primary" />
-          </div>
-          <span className="font-display text-2xl tracking-wide text-foreground">
-            SPA <span className="text-gold font-medium">Plus</span>
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img 
+            src={logoSpaPlus} 
+            alt="SPA Plus - Centre de Bien-être" 
+            className="h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
