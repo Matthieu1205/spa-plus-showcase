@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -50,8 +50,8 @@ const Contact = () => {
           </h1>
           <div className="divider-gold mb-8" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Une question, une réservation ou simplement envie de nous dire bonjour ? 
-            Nous sommes à votre écoute.
+            Une question, une réservation ou simplement envie de nous dire
+            bonjour ? Nous sommes à votre écoute.
           </p>
         </div>
       </section>
@@ -62,9 +62,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Info */}
             <div>
-              <h2 className="heading-section text-3xl mb-8">
-                Nos Coordonnées
-              </h2>
+              <h2 className="heading-section text-3xl mb-8">Nos Coordonnées</h2>
 
               <div className="space-y-8">
                 <div className="flex gap-4">
@@ -74,8 +72,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-display text-lg mb-1">Adresse</h3>
                     <p className="text-muted-foreground">
-                      123 Avenue du Bien-être<br />
-                      75008 Paris, France
+                      Ivoire golf Club Abidjan.
+                      <br />
+                      cote d'Ivoire
                     </p>
                   </div>
                 </div>
@@ -86,11 +85,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-display text-lg mb-1">Téléphone</h3>
-                    <a 
-                      href="tel:+33123456789" 
+                    <a
+                      href="tel:+225 07 59 98 52 98"
                       className="text-muted-foreground hover:text-gold transition-colors"
                     >
-                      +33 1 23 45 67 89
+                      +225 07 59 98 52 98
                     </a>
                   </div>
                 </div>
@@ -101,11 +100,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-display text-lg mb-1">Email</h3>
-                    <a 
-                      href="mailto:contact@spapplus.fr" 
+                    <a
+                      href="mailto:spa-plus@aviso.ci"
                       className="text-muted-foreground hover:text-gold transition-colors"
                     >
-                      contact@spapplus.fr
+                      spa-plus@aviso.ci
                     </a>
                   </div>
                 </div>
@@ -117,7 +116,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-display text-lg mb-1">Horaires</h3>
                     <p className="text-muted-foreground">
-                      Lundi - Samedi: 9h00 - 20h00<br />
+                      Lundi - Samedi: 9h00 - 20h00
+                      <br />
                       Dimanche: 10h00 - 18h00
                     </p>
                   </div>
@@ -127,14 +127,14 @@ const Contact = () => {
               {/* Map placeholder */}
               <div className="mt-12 aspect-video bg-secondary rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2158766418307!2d2.3002179!3d48.8737917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2sArc%20de%20Triomphe!5e0!3m2!1sfr!2sfr!4v1702900000000!5m2!1sfr!2sfr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.??????????!2d-3.??????? !3d5.??????? !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x???????%3A0x???????!2sIvoire%20Golf%20Club!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localisation SPA Plus"
+                  title="Localisation Ivoire Golf Club Abidjan"
                 />
               </div>
             </div>
@@ -150,7 +150,9 @@ const Contact = () => {
                   <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                     <CheckCircle className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="font-display text-2xl mb-4">Merci pour votre message !</h3>
+                  <h3 className="font-display text-2xl mb-4">
+                    Merci pour votre message !
+                  </h3>
                   <p className="text-muted-foreground mb-8">
                     Notre équipe vous répondra dans les meilleurs délais.
                   </p>
@@ -158,7 +160,13 @@ const Contact = () => {
                     variant="elegant"
                     onClick={() => {
                       setIsSubmitted(false);
-                      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+                      setFormData({
+                        name: "",
+                        email: "",
+                        phone: "",
+                        subject: "",
+                        message: "",
+                      });
                     }}
                   >
                     Envoyer un autre message
@@ -168,7 +176,10 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Nom complet *
                       </label>
                       <Input
@@ -183,7 +194,10 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Email *
                       </label>
                       <Input
@@ -201,7 +215,10 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Téléphone
                       </label>
                       <Input
@@ -210,12 +227,15 @@ const Contact = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+33 6 12 34 56 78"
+                        placeholder="+225 07 59 98 52 98"
                         className="h-12"
                       />
                     </div>
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="subject"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Sujet *
                       </label>
                       <Input
@@ -232,7 +252,10 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Message *
                     </label>
                     <Textarea

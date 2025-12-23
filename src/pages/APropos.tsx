@@ -1,22 +1,25 @@
-import { Layout } from "@/components/layout/Layout";
-import { Award, Heart, Users, Leaf } from "lucide-react";
 import heroImage from "@/assets/hero-spa.jpg";
+import { Layout } from "@/components/layout/Layout";
+import { Award, Heart, Leaf, Users } from "lucide-react";
 
 const values = [
   {
     icon: Heart,
     title: "Passion",
-    description: "Chaque soin est prodigué avec amour et dévouement pour votre bien-être.",
+    description:
+      "Chaque soin est prodigué avec amour et dévouement pour votre bien-être.",
   },
   {
     icon: Award,
     title: "Excellence",
-    description: "Nous utilisons uniquement des produits de qualité premium et des techniques éprouvées.",
+    description:
+      "Nous utilisons uniquement des produits de qualité premium et des techniques éprouvées.",
   },
   {
     icon: Users,
     title: "Inclusion",
-    description: "Un espace chaleureux où femmes et hommes sont accueillis avec la même attention.",
+    description:
+      "Un espace chaleureux où femmes et hommes sont accueillis avec la même attention.",
   },
   {
     icon: Leaf,
@@ -77,19 +80,27 @@ const APropos = () => {
         <div className="container-spa">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Fondé en 2015, <strong className="text-foreground">SPA Plus</strong> est né 
-              d'une vision simple : créer un sanctuaire de bien-être où chaque personne, 
-              femme ou homme, peut s'évader du quotidien et retrouver son équilibre intérieur.
+              <strong className="text-foreground">SPA Plus</strong>
+              est un espace de bien-être et de relaxation dédié à l’harmonie du
+              corps et de l’esprit. Dans un cadre apaisant et raffiné, nous vous
+              offrons une expérience unique alliant soins professionnels,
+              détente profonde et remise en forme.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Notre fondatrice, Marie Dupont, après 15 années passées dans les plus grands 
-              spas parisiens, a voulu créer un lieu unique combinant expertise professionnelle, 
-              ambiance zen et accueil chaleureux pour une clientèle mixte en quête de qualité.
+              Nos prestations comprennent des massages relaxants et
+              thérapeutiques, des soins du visage et du corps, des rituels
+              bien-être, ainsi que des services personnalisés adaptés à vos
+              besoins. Chez SPA PLUS, chaque détail est pensé pour vous procurer
+              sérénité, confort et satisfaction totale.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Aujourd'hui, SPA Plus est devenu une référence du bien-être à Paris, 
-              accueillant des milliers de clients chaque année dans un cadre raffiné 
-              et apaisant.
+              Grâce à une équipe qualifiée, des produits de qualité et des
+              techniques modernes, SPA PLUS s’impose comme la destination idéale
+              pour s’évader du stress quotidien, retrouver l’équilibre et
+              sublimer votre bien-être.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              SPA PLUS – Plus de détente, plus de soins, plus de bien-être.
             </p>
           </div>
         </div>
@@ -116,7 +127,9 @@ const APropos = () => {
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-display text-xl mb-3">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -136,18 +149,20 @@ const APropos = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
-              <div
-                key={member.name}
-                className="text-center group"
-              >
+              <div key={member.name} className="text-center group">
                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center">
                   <span className="font-display text-3xl text-primary">
-                    {member.name.split(" ").map(n => n[0]).join("")}
+                    {member.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
                   </span>
                 </div>
                 <h3 className="font-display text-xl mb-2">{member.name}</h3>
                 <p className="text-gold text-sm mb-3">{member.role}</p>
-                <p className="text-muted-foreground text-sm">{member.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {member.description}
+                </p>
               </div>
             ))}
           </div>
@@ -168,7 +183,9 @@ const APropos = () => {
                 <span className="block font-display text-4xl lg:text-5xl text-gold mb-2">
                   {stat.value}
                 </span>
-                <span className="text-primary-foreground/70 text-sm">{stat.label}</span>
+                <span className="text-primary-foreground/70 text-sm">
+                  {stat.label}
+                </span>
               </div>
             ))}
           </div>

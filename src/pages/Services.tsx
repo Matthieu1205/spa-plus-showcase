@@ -1,46 +1,116 @@
-import { Layout } from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Clock, ArrowRight } from "lucide-react";
-import massageImage from "@/assets/massage-service.jpg";
 import facialImage from "@/assets/facial-service.jpg";
 import hammamImage from "@/assets/hammam-service.jpg";
+import massageImage from "@/assets/img-massage.jpg";
+import { Layout } from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const serviceCategories = [
   {
     id: "massages",
     title: "Massages",
-    description: "Relaxants et thérapeutiques pour un corps apaisé et revitalisé",
+    description:
+      "Relaxants et thérapeutiques pour un corps apaisé et revitalisé",
     image: massageImage,
     services: [
-      { name: "Massage Relaxant", duration: "60 min", price: "85€", description: "Massage doux aux huiles essentielles pour une détente profonde." },
-      { name: "Massage Thérapeutique", duration: "75 min", price: "110€", description: "Soulage les tensions musculaires et améliore la circulation." },
-      { name: "Massage aux Pierres Chaudes", duration: "90 min", price: "130€", description: "Alliance parfaite de chaleur et de pressions pour un bien-être absolu." },
-      { name: "Massage Duo", duration: "60 min", price: "150€", description: "Partagez un moment de détente à deux dans notre cabine duo." },
+      {
+        name: "Massage Relaxant",
+        duration: "60 min",
+        price: "85€",
+        description:
+          "Massage doux aux huiles essentielles pour une détente profonde.",
+      },
+      {
+        name: "Massage Thérapeutique",
+        duration: "75 min",
+        price: "110€",
+        description:
+          "Soulage les tensions musculaires et améliore la circulation.",
+      },
+      {
+        name: "Massage aux Pierres Chaudes",
+        duration: "90 min",
+        price: "130€",
+        description:
+          "Alliance parfaite de chaleur et de pressions pour un bien-être absolu.",
+      },
+      {
+        name: "Massage Duo",
+        duration: "60 min",
+        price: "150€",
+        description:
+          "Partagez un moment de détente à deux dans notre cabine duo.",
+      },
     ],
   },
   {
     id: "visage",
     title: "Soins du Visage",
-    description: "Traitements personnalisés pour une peau éclatante et rayonnante",
+    description:
+      "Traitements personnalisés pour une peau éclatante et rayonnante",
     image: facialImage,
     services: [
-      { name: "Soin Éclat", duration: "45 min", price: "65€", description: "Nettoyage en profondeur et hydratation pour un teint lumineux." },
-      { name: "Soin Anti-Âge Premium", duration: "75 min", price: "120€", description: "Traitement ciblé avec des actifs haute performance." },
-      { name: "Soin Hydratation Intense", duration: "60 min", price: "85€", description: "Réhydratation profonde pour les peaux desséchées." },
-      { name: "Soin Homme Purifiant", duration: "50 min", price: "70€", description: "Spécialement conçu pour les besoins de la peau masculine." },
+      {
+        name: "Soin Éclat",
+        duration: "45 min",
+        price: "65€",
+        description:
+          "Nettoyage en profondeur et hydratation pour un teint lumineux.",
+      },
+      {
+        name: "Soin Anti-Âge Premium",
+        duration: "75 min",
+        price: "120€",
+        description: "Traitement ciblé avec des actifs haute performance.",
+      },
+      {
+        name: "Soin Hydratation Intense",
+        duration: "60 min",
+        price: "85€",
+        description: "Réhydratation profonde pour les peaux desséchées.",
+      },
+      {
+        name: "Soin Homme Purifiant",
+        duration: "50 min",
+        price: "70€",
+        description:
+          "Spécialement conçu pour les besoins de la peau masculine.",
+      },
     ],
   },
   {
     id: "hammam",
     title: "Hammam & Spa",
-    description: "Rituels détoxifiants pour une relaxation profonde et purifiante",
+    description:
+      "Rituels détoxifiants pour une relaxation profonde et purifiante",
     image: hammamImage,
     services: [
-      { name: "Accès Hammam", duration: "60 min", price: "40€", description: "Profitez de notre hammam traditionnel et espace détente." },
-      { name: "Rituel Oriental", duration: "120 min", price: "180€", description: "Hammam, gommage au savon noir et massage à l'huile d'argan." },
-      { name: "Forfait Spa Journée", duration: "Journée", price: "220€", description: "Accès illimité au spa, hammam et un soin au choix." },
-      { name: "Rituel Duo Oriental", duration: "150 min", price: "320€", description: "Expérience complète à partager en couple ou entre amis." },
+      {
+        name: "Accès Hammam",
+        duration: "60 min",
+        price: "40€",
+        description: "Profitez de notre hammam traditionnel et espace détente.",
+      },
+      {
+        name: "Rituel Oriental",
+        duration: "120 min",
+        price: "180€",
+        description:
+          "Hammam, gommage au savon noir et massage à l'huile d'argan.",
+      },
+      {
+        name: "Forfait Spa Journée",
+        duration: "Journée",
+        price: "220€",
+        description: "Accès illimité au spa, hammam et un soin au choix.",
+      },
+      {
+        name: "Rituel Duo Oriental",
+        duration: "150 min",
+        price: "320€",
+        description: "Expérience complète à partager en couple ou entre amis.",
+      },
     ],
   },
 ];
@@ -68,8 +138,8 @@ const Services = () => {
           </h1>
           <div className="divider-gold mb-8" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Découvrez notre gamme complète de soins premium, conçus pour répondre 
-            aux besoins de bien-être des femmes et des hommes.
+            Découvrez notre gamme complète de soins premium, conçus pour
+            répondre aux besoins de bien-être des femmes et des hommes.
           </p>
         </div>
       </section>
@@ -78,10 +148,16 @@ const Services = () => {
       {serviceCategories.map((category, index) => (
         <section
           key={category.id}
-          className={`section-padding ${index % 2 === 0 ? "bg-background" : "bg-cream"}`}
+          className={`section-padding ${
+            index % 2 === 0 ? "bg-background" : "bg-cream"
+          }`}
         >
           <div className="container-spa">
-            <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-start ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+            <div
+              className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-start ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
+            >
               {/* Image */}
               <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div className="relative">
@@ -100,7 +176,9 @@ const Services = () => {
                   {category.id}
                 </span>
                 <h2 className="heading-section mb-4">{category.title}</h2>
-                <p className="text-muted-foreground mb-8">{category.description}</p>
+                <p className="text-muted-foreground mb-8">
+                  {category.description}
+                </p>
 
                 <div className="space-y-6">
                   {category.services.map((service) => (
@@ -110,13 +188,17 @@ const Services = () => {
                     >
                       <div className="flex justify-between items-start mb-2">
                         <h3 className="font-display text-xl">{service.name}</h3>
-                        <span className="text-gold font-display text-xl">{service.price}</span>
+                        <span className="text-gold font-display text-xl">
+                          {service.price}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2 text-muted-foreground text-sm mb-3">
                         <Clock className="w-4 h-4" />
                         <span>{service.duration}</span>
                       </div>
-                      <p className="text-muted-foreground text-sm">{service.description}</p>
+                      <p className="text-muted-foreground text-sm">
+                        {service.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -158,8 +240,8 @@ const Services = () => {
             Envie de vous <span className="italic">Ressourcer</span> ?
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-xl mx-auto">
-            Réservez votre soin dès maintenant et offrez-vous un moment 
-            de pure détente.
+            Réservez votre soin dès maintenant et offrez-vous un moment de pure
+            détente.
           </p>
           <Button
             variant="outline"

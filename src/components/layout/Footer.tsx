@@ -90,7 +90,9 @@ export const Footer = () => {
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-background/70 text-sm">
                   Ivoir Golf Club
-                  <br /> Abidjan, Côte d'Ivoire
+                  <br /> Abidjan. Radisson Blu hotel
+                  <br /> Abidjan. Hotel Président
+                  <br /> Yamoussokro. Hotel Ressort Yamousokrou.
                 </span>
               </li>
               <li className="flex items-center gap-3">
