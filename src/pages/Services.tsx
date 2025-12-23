@@ -1,6 +1,6 @@
-import facialImage from "@/assets/facial-service.jpg";
 import hammamImage from "@/assets/hammam-service.jpg";
 import massageImage from "@/assets/img-massage.jpg";
+import facialImage from "@/assets/img1.jpg";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock } from "lucide-react";
