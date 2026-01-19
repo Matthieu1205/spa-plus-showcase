@@ -3,7 +3,7 @@ import massageImage from "@/assets/img-massage.jpg";
 import facialImage from "@/assets/img1.jpg";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Clock, Hand, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const serviceCategories = [
@@ -178,9 +178,30 @@ const antiAgingServices = [
   },
 ];
 
+// Hands & Feet services
+const handsAndFeetServices = [
+  {
+    name: "Spa pédicure / Spa pedicure",
+    duration: "40mn",
+    price: "25.000 Fcfa",
+    icon: "spa",
+  },
+  {
+    name: "Pose vernis permanent / Permanent nail polish application",
+    duration: "30mn",
+    price: "10.000 Fcfa",
+    icon: "polish",
+  },
+  {
+    name: "Paraffine / Paraffin",
+    duration: "15mn",
+    price: "10.000 Fcfa",
+    icon: "paraffin",
+  },
+];
+
 const additionalServices = [
   { name: "Épilation Complète", price: "à partir de 25€" },
-  { name: "Manucure & Pédicure", price: "à partir de 35€" },
   { name: "Soin Corps Modelant", price: "90€" },
   { name: "Enveloppement Détox", price: "75€" },
   { name: "Réflexologie Plantaire", price: "55€" },
@@ -383,6 +404,58 @@ const Services = () => {
           </div>
         </section>
       ))}
+
+      {/* Hands & Feet Section */}
+      <section className="section-padding bg-gradient-to-b from-background to-cream">
+        <div className="container-spa">
+          <div className="text-center mb-12">
+            <span className="inline-block font-display text-gold tracking-widest uppercase text-sm mb-4">
+              hands & feet
+            </span>
+            <h2 className="heading-section mb-4 flex items-center justify-center gap-3">
+              <Hand className="w-8 h-8 text-gold" />
+              Beauté des mains & des pieds
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Soins des mains et des pieds / Hands and feet care
+            </p>
+            <div className="divider-gold mt-6" />
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="grid gap-5">
+              {handsAndFeetServices.map((service, idx) => (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden bg-background rounded-2xl border border-gold/20 p-6 hover:shadow-elevated transition-all duration-300 hover:border-gold/40"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="flex-1">
+                      <h3 className="font-display text-xl text-foreground leading-tight">
+                        {service.name}
+                      </h3>
+                      <div className="flex items-center gap-2 text-muted-foreground text-sm mt-2">
+                        <Clock className="w-4 h-4" />
+                        <span>{service.duration}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <span className="text-gold font-display text-2xl font-medium">
+                        {service.price}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Additional Services */}
       <section className="section-padding bg-sage-light">
