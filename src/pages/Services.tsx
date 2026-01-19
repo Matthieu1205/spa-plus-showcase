@@ -3,7 +3,7 @@ import massageImage from "@/assets/img-massage.jpg";
 import facialImage from "@/assets/img1.jpg";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const serviceCategories = [
@@ -45,41 +45,6 @@ const serviceCategories = [
     ],
   },
   {
-    id: "visage",
-    title: "Soins du Visage",
-    description:
-      "Traitements personnalisés pour une peau éclatante et rayonnante",
-    image: facialImage,
-    services: [
-      {
-        name: "Soin Éclat",
-        duration: "45 min",
-        price: "65€",
-        description:
-          "Nettoyage en profondeur et hydratation pour un teint lumineux.",
-      },
-      {
-        name: "Soin Anti-Âge Premium",
-        duration: "75 min",
-        price: "120€",
-        description: "Traitement ciblé avec des actifs haute performance.",
-      },
-      {
-        name: "Soin Hydratation Intense",
-        duration: "60 min",
-        price: "85€",
-        description: "Réhydratation profonde pour les peaux desséchées.",
-      },
-      {
-        name: "Soin Homme Purifiant",
-        duration: "50 min",
-        price: "70€",
-        description:
-          "Spécialement conçu pour les besoins de la peau masculine.",
-      },
-    ],
-  },
-  {
     id: "hammam",
     title: "Hammam & Spa",
     description:
@@ -115,6 +80,104 @@ const serviceCategories = [
   },
 ];
 
+// Facial care services with brands
+const facialServices = [
+  {
+    name: "Diagnostic de la peau / Skin analysis",
+    duration: "10mn",
+    price: "20.000 Fcfa",
+    brand: null,
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "CLARINS",
+    duration: null,
+    price: "40.000 Fcfa",
+    cure: "70.000 Fcfa",
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "Yves Rocher",
+    duration: "1h10mn",
+    price: "40.000 Fcfa",
+    cure: "70.000 Fcfa",
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "ROCHE Posay",
+    duration: "1h15mn",
+    price: "40.000 Fcfa",
+    cure: "75.000 Fcfa",
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "AVENE",
+    duration: "1h15mn",
+    price: "35.000 Fcfa",
+    cure: "65.000 Fcfa",
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "CLINIQUE",
+    duration: "1h30mn",
+    price: "60.000 Fcfa",
+    cure: "100.000 Fcfa",
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "GUINOT",
+    duration: "1h30mn",
+    price: "100.000 Fcfa",
+    cure: "180.000 Fcfa",
+    premium: true,
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "Corole Franck",
+    duration: "1h30mn",
+    price: "40.000 Fcfa",
+    cure: "70.000 Fcfa",
+  },
+  {
+    name: "Soins précieux / Precious care",
+    brand: "LIERAC",
+    duration: "1h30mn",
+    price: "50.000 Fcfa",
+    cure: "90.000 Fcfa",
+  },
+  {
+    name: "Soins aux herbes et fleurs du jardin / Garden herbs and flowers Care",
+    duration: "30mn",
+    price: "40.000 Fcfa",
+    brand: null,
+    special: true,
+  },
+  {
+    name: "Soins bonne mine / Fresh appearanced face",
+    duration: "30mn",
+    price: "30.000 Fcfa",
+    brand: null,
+  },
+];
+
+const antiAgingServices = [
+  {
+    name: "Wellbox",
+    duration: "30mn",
+    price: "30.000 Fcfa",
+  },
+  {
+    name: "Dermabrasion",
+    duration: "30mn",
+    price: "60.000 Fcfa",
+  },
+  {
+    name: "Anti-rides hydra facial / Anti-wrinkle in-depth treatments",
+    duration: "1h30mn",
+    price: "70.000 Fcfa",
+  },
+];
+
 const additionalServices = [
   { name: "Épilation Complète", price: "à partir de 25€" },
   { name: "Manucure & Pédicure", price: "à partir de 35€" },
@@ -144,7 +207,120 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Service Categories */}
+      {/* Facial Care Section - Featured */}
+      <section className="section-padding bg-gradient-to-b from-cream to-background">
+        <div className="container-spa">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            {/* Image */}
+            <div>
+              <div className="relative">
+                <img
+                  src={facialImage}
+                  alt="Soins du visage"
+                  className="w-full aspect-[4/5] object-cover rounded-lg shadow-elevated"
+                />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold/20 rounded-lg -z-10" />
+                <div className="absolute top-4 left-4 bg-gold/90 text-white px-4 py-2 rounded-full text-sm font-display flex items-center gap-2">
+                  <Sparkles className="w-4 h-4" />
+                  Premium
+                </div>
+              </div>
+            </div>
+
+            {/* Services List */}
+            <div>
+              <span className="inline-block font-display text-gold tracking-widest uppercase text-sm mb-4">
+                facial care
+              </span>
+              <h2 className="heading-section mb-4">Soins du Visage</h2>
+              <p className="text-muted-foreground mb-8">
+                Traitements personnalisés avec des marques prestigieuses pour une peau éclatante et rayonnante
+              </p>
+
+              <div className="space-y-4">
+                {facialServices.map((service, idx) => (
+                  <div
+                    key={idx}
+                    className={`relative overflow-hidden rounded-xl transition-all duration-300 hover:shadow-elevated ${
+                      service.premium 
+                        ? "bg-gradient-to-r from-gold/10 via-gold/5 to-transparent border-2 border-gold/30" 
+                        : service.special
+                        ? "bg-gradient-to-r from-green-50 to-transparent border border-green-200"
+                        : "bg-background border border-border/50"
+                    } p-5`}
+                  >
+                    {service.premium && (
+                      <div className="absolute top-2 right-2">
+                        <Star className="w-5 h-5 text-gold fill-gold" />
+                      </div>
+                    )}
+                    
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                      <div className="flex-1">
+                        <h3 className="font-display text-lg leading-tight">{service.name}</h3>
+                        {service.brand && (
+                          <span className="inline-block mt-1 px-3 py-1 bg-gold/10 text-gold rounded-full text-sm font-medium">
+                            {service.brand}
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-right">
+                        <span className="text-gold font-display text-xl font-medium">
+                          {service.price}
+                        </span>
+                        {service.cure && (
+                          <div className="text-sm text-muted-foreground mt-1">
+                            Cure de 2 soins: <span className="text-primary font-medium">{service.cure}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {service.duration && (
+                      <div className="flex items-center gap-2 text-muted-foreground text-sm mt-3">
+                        <Clock className="w-4 h-4" />
+                        <span>{service.duration}</span>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Anti-aging Section */}
+              <div className="mt-10 pt-8 border-t border-gold/20">
+                <h3 className="font-display text-2xl mb-6 flex items-center gap-3">
+                  <Sparkles className="w-6 h-6 text-gold" />
+                  Soins anti-vieillissement
+                  <span className="text-sm text-muted-foreground font-normal">/ Age-defying treatments</span>
+                </h3>
+                <div className="grid gap-4">
+                  {antiAgingServices.map((service, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-gradient-to-r from-primary/5 to-transparent p-5 rounded-xl border border-primary/10 hover:shadow-soft transition-all duration-300"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div>
+                          <h4 className="font-display text-lg">{service.name}</h4>
+                          <div className="flex items-center gap-2 text-muted-foreground text-sm mt-1">
+                            <Clock className="w-4 h-4" />
+                            <span>{service.duration}</span>
+                          </div>
+                        </div>
+                        <span className="text-gold font-display text-xl font-medium">
+                          {service.price}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Service Categories */}
       {serviceCategories.map((category, index) => (
         <section
           key={category.id}
