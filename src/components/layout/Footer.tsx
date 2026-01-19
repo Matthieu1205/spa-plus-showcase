@@ -1,3 +1,4 @@
+import logoSpaPlus from "@/assets/logo-spa-plus.jpg";
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,13 +12,10 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
               <img
-                src="/favicon.ico"
+                src={logoSpaPlus}
                 alt="SPA Plus Logo"
-                className="w-10 h-10 rounded-full bg-background/10"
+                className="h-16 w-auto object-contain"
               />
-              <span className="font-display text-2xl tracking-wide">
-                SPA <span className="text-gold font-medium">Plus</span>
-              </span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-6">
               Un havre de paix dédié à votre bien-être. Découvrez une expérience
