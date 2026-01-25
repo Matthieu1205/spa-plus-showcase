@@ -71,9 +71,9 @@ const Index = () => {
               Bienvenue chez SPA Plus
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-up delay-100">
-              L'Art du <span className="italic">Bien-être</span>
+              Vos plus <span className="italic">Grand moments</span>
               <br />
-              au Féminin & Masculin
+              de Détente.
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-lg animate-fade-up delay-200">
               Offrez-vous une parenthèse de sérénité. Découvrez nos soins
