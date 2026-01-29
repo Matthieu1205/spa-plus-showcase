@@ -111,7 +111,7 @@ const serviceCategories = [
     title: "Le SPA / SPA",
     description:
       "Rituels détoxifiants pour une relaxation profonde et purifiante",
-    image: hammamImage,
+    image: "/images/spa-hammam.jpg",
     services: [
       {
         name: "Hammam / Hammam",
@@ -143,7 +143,7 @@ const serviceCategories = [
   {
     id: "onglerie",
     title: "Onglerie / Nail care",
-    image: hammamImage,
+    image: "/images/onglerie.jpg",
     services: [
       {
         name: "GEL / gel",
@@ -205,7 +205,7 @@ const serviceCategories = [
     description:
       "Remodelage du corps / Body reshaping. Diminution de l’aspect cellullitique / Cellulitis aspect reduction.",
 
-    image: hammamImage,
+    image: "/images/couverture.jpg",
     services: [
       {
         name: "Une séance / One session",
@@ -243,7 +243,7 @@ const serviceCategories = [
     title: "Escale Détente et Bien-être / Relaxing & Well-being Stopover",
     description:
       "Gommage du corps / Body scrub.Enveloppement à base de boue minérale / Mineral mud based wrap.Arome modelage / Arome modeling.Massage relaxant / Relaxing massage.Détente du cuir chevelu / Scalp relaxation",
-    image: hammamImage,
+    image: "/images/detente-bienetre.jpg",
     services: [
       {
         name: "Tarif forfaitaire / Lump sum",
@@ -257,7 +257,7 @@ const serviceCategories = [
     title: "Escale Beauté / Beauty Stopover",
     description:
       "Soins du visage / Facial care.Gommage au sel de la Mer morte / Scrub with Dead Sea salt.",
-    image: hammamImage,
+    image: "/images/escalebeauté.jpg",
     services: [
       {
         name: "Tarif forfaitaire / Lump sum",
@@ -367,7 +367,7 @@ const serviceCategories = [
   {
     id: "soins-d-epilation",
     title: "Soins d’épilation / Epilation ",
-    image: hammamImage,
+    image: "/images/epilation.jpg",
     services: [
       {
         name: "Demi-jambes / Half legs or feet",
@@ -444,7 +444,7 @@ const serviceCategories = [
   {
     id: "soins-du-corps",
     title: "Soins du corps / Body care",
-    image: hammamImage,
+    image: "/images/soincorp.jpg",
     services: [
       {
         name: "Soins corporels à base de CHOCOLAT naturel / Raw CHOCOLATE based body care",
@@ -486,7 +486,7 @@ const serviceCategories = [
   {
     id: "maquillage",
     title: "Maquillage / Make-up",
-    image: hammamImage,
+    image: "/images/maquillage.jpeg",
     services: [
       {
         name: "Maquillage jour / Day make-up",
@@ -549,7 +549,7 @@ const serviceCategories = [
     id: "soins-de-cheveux",
     title: "Soins sur cheveux Naturels / Natural hair care",
 
-    image: hammamImage,
+    image: "/images/soindescheveux.jpg",
     services: [
       {
         name: "Shampooing enfant et traitement/ Kids shampooing & hair treatment",
