@@ -1,10 +1,18 @@
 import hammamImage from "@/assets/hammam-service.jpg";
 import heroImage from "@/assets/hero-spa.jpg";
+import imageAcceuil from "@/assets/imageacceuil.jpeg";
+import imageAcceuill from "@/assets/imageacceuill.jpeg";
 import massageImage from "@/assets/img-massage.jpg";
 import facialImage from "@/assets/img1.jpg";
 import productsImage from "@/assets/produit.jpg";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, Award, Heart, Sparkles, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -53,15 +61,40 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="SPA Plus - Espace de bien-être luxueux"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+      <section className="relative min-h-[70vh] flex items-center">
+        {/* Background Carousel */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <Carousel
+            plugins={[Autoplay({ delay: 5000 })]}
+            className="w-full h-full"
+          >
+            <CarouselContent className="h-[450px] md:h-[550px] lg:h-[650px]">
+              <CarouselItem className="h-full">
+                <img
+                  src={heroImage}
+                  alt="SPA Plus - Espace de bien-être luxueux"
+                  className="w-full h-[55vh] md:h-[85vh] object-cover"
+                />
+              </CarouselItem>
+
+              <CarouselItem className="h-full">
+                <img
+                  src={imageAcceuil}
+                  alt="SPA Plus - Image Accueil 1"
+                  className="w-full h-[60vh] md:h-[75vh] object-cover"
+                />
+              </CarouselItem>
+
+              <CarouselItem className="h-full">
+                <img
+                  src={imageAcceuill}
+                  alt="SPA Plus - Image Accueil 2"
+                  className="w-full h-[60vh] md:h-[75vh] object-cover"
+                />
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/40 to-transparent" />
         </div>
 
         {/* Content */}
@@ -71,9 +104,9 @@ const Index = () => {
               Bienvenue chez SPA Plus
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-up delay-100">
-              Vos plus <span className="italic">Grand moments</span>
+              Vos plus <span className="italic">Grands moments</span>
               <br />
-              de Détente.
+              de Détentes.
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-lg animate-fade-up delay-200">
               Offrez-vous une parenthèse de sérénité. Découvrez nos soins
