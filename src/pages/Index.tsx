@@ -1,7 +1,5 @@
 import hammamImage from "@/assets/hammam-service.jpg";
 import heroImage from "@/assets/hero-spa.jpg";
-import imageAcceuil from "@/assets/imageacceuil.jpeg";
-import imageAcceuill from "@/assets/imageacceuill.jpeg";
 import massageImage from "@/assets/img-massage.jpg";
 import facialImage from "@/assets/img1.jpg";
 import productsImage from "@/assets/produit.jpg";
@@ -74,22 +72,6 @@ const Index = () => {
                   src={heroImage}
                   alt="SPA Plus - Espace de bien-être luxueux"
                   className="w-full h-[55vh] md:h-[85vh] object-cover"
-                />
-              </CarouselItem>
-
-              <CarouselItem className="h-full">
-                <img
-                  src={imageAcceuil}
-                  alt="SPA Plus - Image Accueil 1"
-                  className="w-full h-[60vh] md:h-[75vh] object-cover"
-                />
-              </CarouselItem>
-
-              <CarouselItem className="h-full">
-                <img
-                  src={imageAcceuill}
-                  alt="SPA Plus - Image Accueil 2"
-                  className="w-full h-[60vh] md:h-[75vh] object-cover"
                 />
               </CarouselItem>
             </CarouselContent>
