@@ -1,5 +1,5 @@
+import fond2 from "@/assets/fond2.jpeg";
 import hammamImage from "@/assets/hammam-service.jpg";
-import heroImage from "@/assets/hero-spa.jpg";
 import massageImage from "@/assets/img-massage.jpg";
 import facialImage from "@/assets/img1.jpg";
 import productsImage from "@/assets/produit.jpg";
@@ -69,7 +69,7 @@ const Index = () => {
             <CarouselContent className="h-[450px] md:h-[550px] lg:h-[650px]">
               <CarouselItem className="h-full">
                 <img
-                  src={heroImage}
+                  src={fond2}
                   alt="SPA Plus - Espace de bien-être luxueux"
                   className="w-full h-[55vh] md:h-[85vh] object-cover"
                 />
