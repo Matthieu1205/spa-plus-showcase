@@ -114,9 +114,9 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-background/70 text-sm">
-                  Lun - Sam: 9h - 20h
+                  Mardi au Dimanche: 9h - 22h
                   <br />
-                  Dim: 10h - 18h
+                  NB: Ouvert les lundis fériés.
                 </span>
               </li>
             </ul>
